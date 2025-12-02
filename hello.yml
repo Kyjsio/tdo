@@ -1,13 +1,15 @@
 name: Hello
+
 on: workflow_dispatch
+
 jobs:
   say-hi:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, GitHub Actions!"
   second:
-    needs: hello      
+    needs: say-hi       
     runs-on: ubuntu-latest
     steps:
       - name: Drugi komunikat
-        run: echo "To jest job 2 — wykonuje się po jobie 1!"
+        run: echo "Hello, GitHub Actions 2 !"
