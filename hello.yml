@@ -5,3 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, GitHub Actions!"
+  second:
+    needs: hello      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Drugi komunikat
+        run: echo "To jest job 2 — wykonuje się po jobie 1!"
