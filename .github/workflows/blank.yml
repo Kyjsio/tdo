@@ -1,6 +1,7 @@
 name: Hello
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   say-hi:
@@ -13,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Drugi komunikat
-      - run: echo "Hello, GitHub Actions 2!"
+        run: echo "Hello, GitHub Actions 2!"
